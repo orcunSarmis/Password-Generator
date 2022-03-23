@@ -13,26 +13,32 @@ function generatePassword() {
 
   // Ask user how many character wants in the password.
   var howCharacters = window.prompt("How many characters would you like your password to contain? ")
-  var specialCh = window.confirm("Click OK to confirm including special chacters.")
-
+  
+  
+  
 
 if (!howCharacters) {
   return alert("You must choose at least one character type.");
 
-} else (passwordLength < 8 || passwordLength > 129 ) ;{
+} if (passwordLength < 8 || passwordLength > 129 ) {
 
+ 
   return alert("Password lenght must be at least 8 characters." );
 } 
 
-
+var specialCh = window.confirm("Click OK to confirm including special chacters.")
 if (specialCh == true) {
-  return alert("Must select at least one character type"); 
+  return ; 
 
+} if (specialCh == false) {
+  return alert("You must choose at least one character type.");
 }
 
-// else {
-//   var speCharacter = window.prompt("Click ok to confirm including special characters.")
-// }
+var low = window.confirm("Click OK to confirm including lowercase chacters.")
+
+var upper = window.confirm("Click OK to confirm including uppercase chacters.")
+
+
 
 // var password = Math.floor(Math.random() * passwordLength);
 
