@@ -20,11 +20,12 @@ function generatePassword() {
 if (!howCharacters) {
   return alert("You must choose at least one character type.");
 
-} if (passwordLength < 8 || passwordLength > 129 ) {
+} if (passwordLength < 8) {
 
- 
   return alert("Password lenght must be at least 8 characters." );
-} 
+} if (passwordLength > 129) {
+  return alert("Password lenght must less tahn 129t characters.");
+}
 
 var specialCh = window.confirm("Click OK to confirm including special chacters.")
 if (specialCh == true) {
