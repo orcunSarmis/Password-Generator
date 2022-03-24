@@ -11,7 +11,6 @@ function writePassword() {
 
 }
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
  
@@ -20,9 +19,15 @@ function generatePassword() {
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var symbol =  " !\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
+
   var howCharacters;
+
   var passwordLenght;
   var specialChar;
+  var numeric;
+  var lowC;
+  var upperC;
+  var blank = [];
 
   var maxLength = 8;
   var maxLength = 129;
@@ -30,11 +35,20 @@ function generatePassword() {
   var text;
 
   // Ask user how many character wants in the password.
-   howCharacters = prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129")
+   passwordLenght = prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129")
 
-   specialChar = prompt("Click OK to confirm including special chacters.", " !\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~")
-  console.log(howCharacters);
-  
+
+
+   specialChar = confirm("Click OK to confirm including special chacters.")
+   
+   numeric = confirm("Click OK to confirm including numeric chacters.")
+
+   lowC = confirm("Click OK to confirm including lower case chacters.")
+   
+   upperC = confirm("Click OK to confirm including upper case chacters.")
+  //  console.log(upperC);
+
+
 
 
 //   var maxLength = window.prompt("How many characters would you like your password to contain? ")
