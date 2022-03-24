@@ -12,30 +12,29 @@ function generatePassword() {
   var text;
 
   // Ask user how many character wants in the password.
-  var howCharacters = window.prompt("How many characters would you like your password to contain? ")
-  
-  
-  
+  // var howCharacters = window.prompt("How many characters would you like your password to contain? ")
 
-if (!howCharacters) {
+  var passwordLength = window.prompt("How many characters would you like your password to contain? ")
+
+if (!passwordLength) {
+  
   return alert("You must choose at least one character type.");
-
 } if (passwordLength < 8) {
 
   return alert("Password lenght must be at least 8 characters." );
 } if (passwordLength > 129) {
-  return alert("Password lenght must less tahn 129t characters.");
-}
+  return alert("Password lenght must less than 129 characters.");
+} else 
 
 var specialCh = window.confirm("Click OK to confirm including special chacters.")
 if (specialCh == true) {
   return ; 
-
 } if (specialCh == false) {
   return alert("You must choose at least one character type.");
 }
 
 var low = window.confirm("Click OK to confirm including lowercase chacters.")
+// if ()
 
 var upper = window.confirm("Click OK to confirm including uppercase chacters.")
 
