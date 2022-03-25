@@ -50,11 +50,12 @@ if (isNaN(passwordLenght)) {
    specialChar = confirm("Click OK to confirm including special characters.")
 
    if (specialChar == true) {
-    possibleChar.concat(symbol);
-     randomChar = Math.floor(Math.random() * possibleChar.length);
+    // possibleChar.concat(symbol);
+    possibleChar = Math.floor(Math.random() * symbol.length);
+    
 
     //  possibleChar.concat(possibleChar = symbol.substring(Math.floor(Symbol.length*Math.random())));
-     console.log(randomChar);
+    //  console.log(possibleChar);
    }
 
    numeric = confirm("Click OK to confirm including numeric characters.")
