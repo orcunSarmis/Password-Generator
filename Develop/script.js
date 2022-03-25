@@ -8,9 +8,9 @@ var numbers = "1234567890";
 
 var howCharacters;
 
-var passwordLenght;
+var passwordLenght="";;
 var specialChar;
-var numeric;
+var numeric = "";
 var lowC = "";
 var upperC = "";
 var possibleChar = "";
@@ -19,7 +19,7 @@ var userChosenChars = ""
 var maxLength = 8;
 var maxLength = 128;
 var password = "";
-var text;  
+
 
 
 
@@ -38,7 +38,7 @@ function generatePassword() {
 
   if(passwordLenght < 8 || passwordLenght > 128) {
     alert("Please try again! (Min:8-Max:128)");
-    generatePassword()
+    // generatePassword()
   }else {
      var isSymbol = window.confirm("Click OK to confirm including special characters.");
 
@@ -65,18 +65,17 @@ function generatePassword() {
 
 
   for (var i =0; i<passwordLenght-4; i++) {
-    password += passwordLenght.possibleChar.numeric.upperC.lowC.charAt(Math.floor(Math.random()) * passwordLenght);
+    password += passwordLenght.numeric.upperCase.lowerCase.charAt(Math.floor(Math.random()) * passwordLenght);
   }
-
+console.log(password);
   if( isSymbol || isNumeric || isUpperCase || isLowerCase){
-
 
     
   }else {
     alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
   }
 
-
+   
   return "";
   }
 
@@ -88,6 +87,8 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+
 
 
 
