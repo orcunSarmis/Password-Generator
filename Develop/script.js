@@ -29,6 +29,7 @@ function generatePassword() {
   var lowC;
   var upperC;
   var possibleChar = "";
+  var randomChar = "";
 
   var maxLength = 8;
   var maxLength = 128;
@@ -38,24 +39,42 @@ function generatePassword() {
   // Ask user how many character wants in the password.
    passwordLenght = parseInt(prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129"))
 
-
-   if(passwordLenght < 8 || passwordLenght > 128) {
+if (isNaN(passwordLenght)) {
+  alert("Please try again with only numbers.");
+  generatePassword()
+}else if(passwordLenght < 8 || passwordLenght > 128) {
     alert("Please try again! (Min:8-Max:128)");
     generatePassword()
    }
 
-   specialChar = confirm("Click OK to confirm including special chacters.")
+   specialChar = confirm("Click OK to confirm including special characters.")
 
    if (specialChar == true) {
-     possibleChar.concat(possibleChar = symbol.substring(Math.floor(Symbol.length*Math.random())));
-     console.log(possibleChar);
+    possibleChar.concat(symbol);
+     randomChar = Math.floor(Math.random() * possibleChar.length);
+
+    //  possibleChar.concat(possibleChar = symbol.substring(Math.floor(Symbol.length*Math.random())));
+     console.log(randomChar);
    }
 
-   numeric = confirm("Click OK to confirm including numeric chacters.")
+   numeric = confirm("Click OK to confirm including numeric characters.")
 
-   lowC = confirm("Click OK to confirm including lower case chacters.")
+   if (numeric == true)  {
+    
+   }
+
+   lowC = confirm("Click OK to confirm including lower case characters.")
+
+   if (lowC == true) {
+
+   }
    
-   upperC = confirm("Click OK to confirm including upper case chacters.")
+   upperC = confirm("Click OK to confirm including upper case characters.")
+
+   if (upperC == true) {
+
+   }
+
   //  console.log(upperC);
 
 
@@ -99,6 +118,6 @@ function generatePassword() {
 
 // }
 
-  return ""
+  return "";
 }
 
