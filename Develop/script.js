@@ -1,24 +1,24 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var upperCase = ["A","B","C","D","E","F","G","H","I","J","H","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var symbol =  [" ", "!", "'", "#", "$", "%", "&", "*", "(", ")", "?"];
-var numbers = [1,2,3,4,5,6,7,8,9,0];
+var upperCase = "ABCDEFGHIJHLMNOPQRSTUVWXYZ";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var symbol =  "!'#$ %& *@~()?/";
+var numbers = "1234567890";
 
 var howCharacters;
 
 var passwordLenght;
 var specialChar;
 var numeric;
-var lowC;
-var upperC;
+var lowC = "";
+var upperC = "";
 var possibleChar = "";
 var randomChar = "";
-
+var userChosenChars = ""
 var maxLength = 8;
 var maxLength = 128;
-
+var password = "";
 var text;  
 
 
@@ -27,7 +27,7 @@ var text;
 generateBtn.addEventListener("click", writePassword);
  
 function generatePassword() {
-  var password = "";
+  
    // Ask user how many character wants in the password.
  var passwordLenght = parseInt(prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129"));
 
@@ -49,36 +49,29 @@ function generatePassword() {
      var isLowerCase = window.confirm("Click OK to confirm including lowercase characters.");
   }
 
-
-  if(isSymbol) {
-    var index = Math.floor(Math.random() * symbol.length);
-      possibleChar = symbol[index];
-  }
-
-  if(isNumeric) {
-    var index = Math.floor(Math.random() * numbers.length);
-      numeric = numbers[index];
-  }
-
-  if(isUpperCase) {
-    var index = Math.floor(Math.random() * upperCase.length);
-      upperC = upperCase[index];
-  }
-
-  if(isLowerCase){
-    var index = Math.floor(Math.random() * lowerCase.length);
-    lowC = lowerCase[index];
-  }
+      if(isSymbol) {
+        userChosenChars += Symbol
+      }
+      if(isNumeric) {
+        userChosenChars += numeric
+      }
+      if(isUpperCase) {
+        userChosenChars += upperCase
+      }
+          
+      if(isLowerCase) {
+      userChosenChars += lowerCase
+    }
 
 
-  for (var i -0; i<passwordLenght-4; i++;) {
-
+  for (var i =0; i<passwordLenght-4; i++) {
+    password += passwordLenght.possibleChar.numeric.upperC.lowC.charAt(Math.floor(Math.random()) * passwordLenght);
   }
 
   if( isSymbol || isNumeric || isUpperCase || isLowerCase){
 
 
-    console.log(passwordLenght, specialChar, numeric, lowC, upperC, possibleChar);
+    
   }else {
     alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
   }
@@ -99,9 +92,26 @@ function writePassword() {
 
 
 
+// console.log(passwordLenght, specialChar, numeric, lowC, upperC, possibleChar);
+  // if(isSymbol) {
+  //   var index = Math.floor(Math.random() * symbol.length);
+  //     possibleChar = symbol[index];
+  // }
 
+  // if(isNumeric) {
+  //   var index = Math.floor(Math.random() * numbers.length);
+  //     numeric = numbers[index];
+  // }
 
+  // // if(isUpperCase) {
+  // //   var index = Math.floor(Math.random() * upperCase.length);
+  // //     upperC = upperCase[index];
+  // // }
 
+  // if(isLowerCase){
+  //   var index = Math.floor(Math.random() * lowerCase.length);
+  //   lowC = lowerCase[index];
+  // }
 
 //    specialChar = confirm("Click OK to confirm including special characters.")
 
