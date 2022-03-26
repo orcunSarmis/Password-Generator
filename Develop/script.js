@@ -15,7 +15,7 @@ var lowC = "";
 var upperC = "";
 var possibleChar = "";
 var randomChar = "";
-var userChosenChars = ""
+var userChosenChars = "";
 var maxLength = 8;
 var maxLength = 128;
 var password = "";
@@ -42,41 +42,54 @@ function generatePassword() {
   }else {
      var isSymbol = window.confirm("Click OK to confirm including special characters.");
 
-     var isNumeric = window.confirm("Click OK to confirm including numeric characters.");
-
+     var isNumbers = window.confirm("Click OK to confirm including numeric characters.");
      var isUpperCase = window.confirm("Click OK to confirm including uppercase characters.");
 
      var isLowerCase = window.confirm("Click OK to confirm including lowercase characters.");
+     
   }
-
+     // This line adds symbols in  userChoseChars
       if(isSymbol) {
-        userChosenChars += Symbol
+        userChosenChars += symbol
+        // console.log(userChosenChars);
       }
-      if(isNumeric) {
-        userChosenChars += numeric
+
+      // This line adds numbers in  userChoseChars
+      if(isNumbers) {
+        userChosenChars += numbers
+        // console.log(userChosenChars);
       }
+
+      // This line adds upperCase in  userChoseChars 
       if(isUpperCase) {
         userChosenChars += upperCase
+        // console.log(userChosenChars);
       }
-          
+      
+      // This line adds lowerCase in  userChoseChars
       if(isLowerCase) {
       userChosenChars += lowerCase
+      
     }
 
 
-  for (var i =0; i<passwordLenght-4; i++) {
-    password += passwordLenght.numeric.upperCase.lowerCase.charAt(Math.floor(Math.random()) * passwordLenght);
+   {
+    // This lines add all criteria in password.
+    for (var i =0; i<userChosenChars.length; i++) {
+      password += userChosenChars[Math.floor(Math.random()) * userChosenChars.length];
+      // console.log(password);
+    }
+   
   }
-console.log(password);
-  if( isSymbol || isNumeric || isUpperCase || isLowerCase){
+  
+  if( isSymbol || isNumbers || isUpperCase || isLowerCase){
 
     
   }else {
     alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
   }
 
-   
-  return "";
+  return password;
   }
 
 // Write password to the #password input
@@ -91,6 +104,13 @@ function writePassword() {
 
 
 
+
+
+
+
+   // // password += Symbol.charAt(Math.floor(Math.random()) * passwordLenght);
+    // password += upperCase.charAt(Math.floor(Math.random()) * passwordLenght);
+    // password += lowerCase.charAt(Math.floor(Math.random()) * passwordLenght);
 
 
 // console.log(passwordLenght, specialChar, numeric, lowC, upperC, possibleChar);
