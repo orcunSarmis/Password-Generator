@@ -3,12 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
 var upperCase = "ABCDEFGHIJHLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var symbol =  "!'#$ %& *@~()?/";
+var symbol =  "!'#$%&*@~()?/";
 var numbers = "1234567890";
 
 var howCharacters;
 
-var passwordLenght="";;
+var passwordLenght="";
 var specialChar;
 var numeric = "";
 var lowC = "";
@@ -75,9 +75,10 @@ function generatePassword() {
 
    {
     // This lines add all criteria in password.
-    for (var i =0; i<userChosenChars.length; i++) {
-      password += userChosenChars[Math.floor(Math.random()) * userChosenChars.length];
-      // console.log(password);
+    for (var i =0; i<passwordLenght; i++) {
+      
+      password += userChosenChars[Math.floor(Math.random() * userChosenChars.length) ];
+      
     }
    
   }
@@ -108,101 +109,6 @@ function writePassword() {
 
 
 
-   // // password += Symbol.charAt(Math.floor(Math.random()) * passwordLenght);
-    // password += upperCase.charAt(Math.floor(Math.random()) * passwordLenght);
-    // password += lowerCase.charAt(Math.floor(Math.random()) * passwordLenght);
-
-
-// console.log(passwordLenght, specialChar, numeric, lowC, upperC, possibleChar);
-  // if(isSymbol) {
-  //   var index = Math.floor(Math.random() * symbol.length);
-  //     possibleChar = symbol[index];
-  // }
-
-  // if(isNumeric) {
-  //   var index = Math.floor(Math.random() * numbers.length);
-  //     numeric = numbers[index];
-  // }
-
-  // // if(isUpperCase) {
-  // //   var index = Math.floor(Math.random() * upperCase.length);
-  // //     upperC = upperCase[index];
-  // // }
-
-  // if(isLowerCase){
-  //   var index = Math.floor(Math.random() * lowerCase.length);
-  //   lowC = lowerCase[index];
-  // }
-
-//    specialChar = confirm("Click OK to confirm including special characters.")
-
-//    if (specialChar == true) {
-//     var index = Math.floor(Math.random() * symbol.length);
-//     possibleChar = symbol[index];
-//    }
-
-//    numeric = confirm("Click OK to confirm including numeric characters.")
-
-//    if (numeric == true)  {
-//     var index = Math.floor(Math.random() * numbers.length);
-//     numeric = numbers[index];
-//    }
-
-//    lowC = confirm("Click OK to confirm including lower case characters.")
-
-//    if (lowC == true) {
-//     var index = Math.floor(Math.random() * lowerCase.length);
-//     lowC = lowerCase[index];
-//    }
-   
-//    upperC = confirm("Click OK to confirm including upper case characters.")
-
-//    if (upperC == true) {
-//     var index = Math.floor(Math.random() * upperCase.length);
-//     upperC = upperCase[index];
-//    }
-
-//  console.log(passwordLenght, specialChar, numeric, lowC, upperC, possibleChar);
-
-
-
-
-
-
-//   var maxLength = window.prompt("How many characters would you like your password to contain? ")
-
-// if (!maxLength) {
-  
-//   return alert("You must choose at least one character type.");
-// } if (maxLength < 8) {
-
-//   return alert("Password lenght must be at least 8 characters." );
-// } if (maxLength > 129) {
-//   return alert("Password lenght must less than 129 characters.");
-// } else 
-
-// var specialCh = window.confirm("Click OK to confirm including special chacters.")
-// if (specialCh == true) {
-//   return ; 
-// } if (specialCh == false) {
-
-//   return alert("You must choose at least one character type."); 
-// }
-
-// var low = window.confirm("Click OK to confirm including lowercase chacters.")
-// if (low == true) {
-// return;
-// }
-
-// var upper = window.confirm("Click OK to confirm including uppercase chacters.")
-
-
-
-// var password = Math.floor(Math.random() * passwordLength);
-
-// if (howCharacters === passwordLength) {
-
-
-// }
+ 
 
 
