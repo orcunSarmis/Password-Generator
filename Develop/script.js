@@ -1,24 +1,28 @@
 // Assignment Code
+
+// This line returns to generate which is with id slector within document with querySelector method,
+// and store in generateBtn.
 var generateBtn = document.querySelector("#generate");
 
+// This lines create variables that fucntion use.
 var upperCase = "ABCDEFGHIJHLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var symbol =  "!'#$%&*@~()?/";
+var symbol =  "!'#$%&*@~]()?[_+{/<>}-";
 var numbers = "1234567890";
-
-var howCharacters;
-
 var passwordLenght="";
-var specialChar;
-var numeric = "";
-var lowC = "";
-var upperC = "";
-var possibleChar = "";
-var randomChar = "";
 var userChosenChars = "";
 var maxLength = 8;
 var maxLength = 128;
 var password = "";
+
+
+
+// var howCharacters;
+// var specialChar;
+// var possibleChar = "";
+// var upperC = "";
+// var lowC = "";
+// var randomChar = "";
 
 
 
@@ -28,21 +32,26 @@ generateBtn.addEventListener("click", writePassword);
  
 function generatePassword() {
   
-   // Ask user how many character wants in the password.
+   //this line asks user how many character wants in the password.
  var passwordLenght = parseInt(prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129"));
 
+//  This lines checks user input is numbers or ewmpty.
  if (isNaN(passwordLenght)) {
-  alert("Please try again with only numbers.");
-  generatePassword()
+  alert("You have to enter numbers Min:8-Max:129.");
+  return;
+  
 }
 
+//  This lines checks user input lenght if is in min and max numbers.
   if(passwordLenght < 8 || passwordLenght > 128) {
     alert("Please try again! (Min:8-Max:128)");
-    // generatePassword()
-  }else {
-     var isSymbol = window.confirm("Click OK to confirm including special characters.");
+    return;
+    
+  }else { // This lines
+     var isSymbol = window.confirm("Click OK to confirm including special characters."); 
 
      var isNumbers = window.confirm("Click OK to confirm including numeric characters.");
+
      var isUpperCase = window.confirm("Click OK to confirm including uppercase characters.");
 
      var isLowerCase = window.confirm("Click OK to confirm including lowercase characters.");
@@ -83,15 +92,17 @@ function generatePassword() {
    
   }
   
+  // This lines check user's input if it's match all criteria.
   if( isSymbol || isNumbers || isUpperCase || isLowerCase){
-
-    
+  
   }else {
     alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
+    
   }
 
   return password;
   }
+  
 
 // Write password to the #password input
 function writePassword() {
