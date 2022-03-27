@@ -60,19 +60,19 @@ function generatePassword() {
      // This line adds symbols in  userChoseChars
       if(isSymbol) {
         userChosenChars += symbol
-        // console.log(userChosenChars);
+        // console.log(userChosenChars); test
       }
 
       // This line adds numbers in  userChoseChars
       if(isNumbers) {
         userChosenChars += numbers
-        // console.log(userChosenChars);
+        // console.log(userChosenChars); test
       }
 
       // This line adds upperCase in  userChoseChars 
       if(isUpperCase) {
         userChosenChars += upperCase
-        // console.log(userChosenChars);
+        // console.log(userChosenChars); test
       }
       
       // This line adds lowerCase in  userChoseChars
@@ -81,6 +81,13 @@ function generatePassword() {
       
     }
 
+  // This lines check user's input if it's match all criteria.
+  if( isSymbol || isNumbers || isUpperCase || isLowerCase){
+  
+  }else {
+    alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
+    return generatePassword();
+  }
 
    {
     // This lines add all criteria in password.
@@ -92,13 +99,6 @@ function generatePassword() {
    
   }
   
-  // This lines check user's input if it's match all criteria.
-  if( isSymbol || isNumbers || isUpperCase || isLowerCase){
-  
-  }else {
-    alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
-    
-  }
 
   return password;
   }
@@ -108,6 +108,7 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+
   // This lines check if password does not equal empty string or null or undefined.
 if (!password == null || !password == undefined || !password == "") {
   passwordText.value =  password;
