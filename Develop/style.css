@@ -1,9 +1,11 @@
 *,
+/* These lines pseudo-elements, insert content to page. */
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Body display properties */
 html,
 body,
 .wrapper {
@@ -12,17 +14,20 @@ body,
   padding: 0;
 }
 
+/* These lines set font-size and backround color into body. */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* These lines set padding into body. */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* These lines set padding and color into header. */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +35,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* These lines set padding background-color, font-size and color into card. */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+/* These lines set display feature background-color into card-header. */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +57,17 @@ header {
   height: 2px;
 }
 
+/* This line sets bodu height. */
 .card-body {
   min-height: 100px;
 }
 
+/* This line sets text align of footer card. */
 .card-footer {
   text-align: center;
 }
 
+/* These lines background befor footer card. */
 .card-footer::before {
   content: " ";
   display: block;
@@ -66,12 +76,14 @@ header {
   height: 2px;
 }
 
+/* These lines display after footer card. */
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* These lines button display properries. */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +109,7 @@ button[disabled] {
   float: right;
 }
 
+/* These lines password box's display properries. */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +131,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* These lines adapt page different screen sizes. */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

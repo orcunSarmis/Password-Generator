@@ -102,14 +102,17 @@ function generatePassword() {
 
   return password;
   }
-  
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  // This lines check if password does not equal empty string or null or undefined.
+if (!password == null || !password == undefined || !password == "") {
+  passwordText.value =  password;
+}
+  // passwordText.value = password;
 
 }
 
