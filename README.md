@@ -35,18 +35,23 @@ Click on the ‘Generate Password’ button to generate a new password:
 
 Users are prompted to select the desired length for their password (minimum 8 characters, maximum 128):
 
+![Screenshot (32)](https://user-images.githubusercontent.com/79064464/160342534-de72013b-cea2-4aa0-9fba-d8d46df7523f.png)
 
 If the user type in letters instead of numbers or select a number <8 or >128 for this first prompt, an error message pops up: 
 
+![Screenshot (33)](https://user-images.githubusercontent.com/79064464/160342569-58f852e9-6c2b-4ddb-a07f-a06d1a6b93f0.png)
 
 Users are then prompted to select the character type (lowercase, uppercase, numeric and/or special characters):
+![Screenshot (34)](https://user-images.githubusercontent.com/79064464/160342590-683d7ee6-ab9f-46f6-963d-eeb03569b312.png)
 
 
 If the user does not select at least one of the character type, an error message is displayed:
+![Screenshot (35)](https://user-images.githubusercontent.com/79064464/160342609-be8290a4-f2c6-4f2c-9512-ec08b6878083.png)
 
 
 Once all the criteria have been selected, a password that meets the selected criteria is generated:
 
+![Screenshot (36)](https://user-images.githubusercontent.com/79064464/160342629-4ade2d0b-36d3-4b30-8a12-70e3eeb33ea3.png)
 
 
 ## License
