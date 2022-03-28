@@ -33,11 +33,11 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   
    //this line asks user how many character wants in the password.
- var passwordLenght = parseInt(prompt("How many characters would you like your password to contain? ",  "Min:8-Max:129"));
+ var passwordLenght = parseInt(prompt("How many characters would you like your password to contain? ",  "Min:8-Max:128"));
 
 //  This lines checks user input is numbers or ewmpty.
  if (isNaN(passwordLenght)) {
-  alert("You have to enter numbers Min:8-Max:129.");
+  alert("Please enter a number comprised between 8 and 128");
   return;
   
 }
@@ -48,13 +48,13 @@ function generatePassword() {
     return;
     
   }else { // This lines
-     var isSymbol = window.confirm("Click OK to confirm including special characters."); 
+     var isSymbol = window.confirm("Click OK if you want your password to contain special characters."); 
 
-     var isNumbers = window.confirm("Click OK to confirm including numeric characters.");
+     var isNumbers = window.confirm("Click OK if you want your password to contain numeric characters.");
 
-     var isUpperCase = window.confirm("Click OK to confirm including uppercase characters.");
+     var isUpperCase = window.confirm("Click OK if you want your password to contain uppercase characters.");
 
-     var isLowerCase = window.confirm("Click OK to confirm including lowercase characters.");
+     var isLowerCase = window.confirm("Click OK if you want your password to contain lowercase characters.");
      
   }
      // This line adds symbols in  userChoseChars
@@ -85,7 +85,7 @@ function generatePassword() {
   if( isSymbol || isNumbers || isUpperCase || isLowerCase){
   
   }else {
-    alert("You need to select at least one of symbols, numbers, uppercase or lowercase.")
+    alert("You need to select at least one of the following: special characters, numbers, uppercase or lowercase.")
     return generatePassword();
   }
 
@@ -111,9 +111,9 @@ function writePassword() {
 
   // This lines check if password does not equal empty string or null or undefined.
 if (!password == null || !password == undefined || !password == "") {
-  passwordText.value =  password;
+  // passwordText.value =  password; test
 }
-  // passwordText.value = password;
+  passwordText.value = password;
 
 }
 

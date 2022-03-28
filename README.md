@@ -1,37 +1,69 @@
-Refactoring a website code to improve accessibility standards.
-• For this project, I refactored the code of a marketing agency’s website, Horiseon, to improve accessibility and optimise their website for search engines. • Accessibility is an increasing concern for organisations with an online presence. It is critical to enhance a business’ visibility but can also have serious reputational implications. Indeed, it is the responsibility of a company to ensure their content is accessible to many users with various needs. • This project contributed to improving the code behind Horiseon’s website to make it more accessible and compliant with accessibility standards. • It was a great opportunity to familiarise myself with accessibility standards which I’ll be able to apply to future projects with similar requirements.
+# <JavascriptPasswordGenerator-OrcunSarmis>
 
-Table of Contents
-Usage
-Credits
-License
-How to Contribute
-Usage
-Actions taken to refactor and improve accessibility: • Verified that the source code was accessible using the ctrl + U and/or right click + View Source. • Review that the code used semantic HTML elements and replace non-semantic ones where required. • Increasing the efficiency of the CSS by consolidating the selectors and properties, organising them to follow the semantic structure of the HTML elements.
+## About the Project
 
-HTML Semantic
+Modify starter code to create a password generator application that enables users to generate random passwords that match their selection criteria. 
 
-• Review the icon and image elements and implement alt attributes to improve accessibility and facilitate website navigation using assisted technology.
+## Table of Contents 
 
-Alt attributes
+- [Built With](#BuiltWith)
+- [Installation](#Installation)
+- [Built with](#Builtwith)
+- [Usage](#usage)
+- [License](#license)
+- [How to Contribute](#HowtoContribute)
+- [Contact](#Contact)
 
-• Review the heading attributes and ensure they fall in sequential order following a h1, h2, h3 logic.
+## Installation
 
-h1, h2, h3
+Open the URL in your web browser.
 
-• Adding a concise and descriptive title element.
+https://orcunsarmis.github.io/Password-Generator/
 
-Title
+## Built With
 
-• Reviewing colour contrast ratio and ensuring compliance with the 4.5,1 ratio for text content and 3.1 for headers as well as reviewing colour choices to prevent green/blue confusion for colour blind users.
+HTML,CSS, Javascript
 
-Background colour was changed from #f2589bd to #2178ab to improve the ratio of the ‘Benefits’ section of the website.
+## Usage
 
-Credits
-Colour contrast was reviewed using WebAIM Contrast Checker.
+The password generator is designed to enable users to generate random passwords based on several criteria such as length, lower or uppercase, numeric, special characters. 
 
-License
-Licensed under CC-BY-SA-4.0.
+Click on the ‘Generate Password’ button to generate a new password: 
 
-How to Contribute
-This project has adopted the Contributor Covenant Code of Conduct. For more information see: Contributor Covenant.
+
+Users are prompted to select the desired length for their password (minimum 8 characters, maximum 128):
+
+
+If the user type in letters instead of numbers or select a number <8 or >128 for this first prompt, an error message pops up: 
+
+
+Users are then prompted to select the character type (lowercase, uppercase, numeric and/or special characters):
+
+
+If the user does not select at least one of the character type, an error message is displayed:
+
+
+Once all the criteria have been selected, a password that meets the selected criteria is generated:
+
+
+
+## License
+
+Licensed under [CC-BY-SA-4.0]( https://choosealicense.com/licenses/cc-by-sa-4.0/).
+
+## How to Contribute
+
+Ideas to improve this application are welcome: 
+
+•	Open issue, discuss proposal
+•	Fork and clone repository
+•	Change code and update tests
+•	npm test
+•	npm run lint
+•	Review changes
+•	Send pull request
+
+## Contact
+
+Orcun Sarmis: yorcunsarmis@gmail.com
+Project Link: https://github.com/orcunSarmis/Password-Generator
