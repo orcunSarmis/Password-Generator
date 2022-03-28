@@ -29,6 +29,8 @@ HTML,CSS, Javascript
 The password generator is designed to enable users to generate random passwords based on several criteria such as length, lower or uppercase, numeric, special characters. 
 
 Click on the ‘Generate Password’ button to generate a new password: 
+  
+![Screenshot (23)](https://user-images.githubusercontent.com/79064464/160341659-49a89551-8a09-4bd3-93d3-ee3c9a9d3189.png)
 
 
 Users are prompted to select the desired length for their password (minimum 8 characters, maximum 128):
